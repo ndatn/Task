@@ -30,8 +30,9 @@ export default function Home() {
               value="Remember Me"
             />
             <span className={styles.checkboxText}>Remember Me</span>
+            <button className={styles.button}>Login</button>
           </label>
-          <button className={styles.button}>Login</button>
+
           <div className={styles.links}>
             <a href="#" className={styles.link}>
               Lost your Password?
