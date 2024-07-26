@@ -1,94 +1,49 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
+import styles from '../styles/Home.module.css';
+import Image from 'next/image';
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <div className={styles.container}>
+        <div className={styles.imageContainer}>
+          <Image
+            src="/next.svg"
+            width={200}
+            height={40}
+            alt="User"
+            // className={styles.profileImage}
+          />
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div className={styles.formContainer}>
+          <label htmlFor="username" className={styles.label}>
+            <h3 className={styles.heading}>User name</h3>
+            <input type="text" id="username" className={styles.input} />
+          </label>
+          <label htmlFor="password" className={styles.label}>
+            <h3 className={styles.heading}>Password</h3>
+            <input type="password" id="password" className={styles.input} />
+          </label>
+          <label htmlFor="rememberMe" className={styles.checkboxLabel}>
+            <input
+              type="checkbox"
+              id="rememberMe"
+              name="rememberMe"
+              value="Remember Me"
+            />
+            <span className={styles.checkboxText}>Remember Me</span>
+          </label>
+          <button className={styles.button}>Login</button>
+          <div className={styles.links}>
+            <a href="#" className={styles.link}>
+              Lost your Password?
+            </a>
+            <a href="#" className={styles.link}>
+              Go to Security Guard Company
+            </a>
+            <a href="#" className={styles.link}>
+              XPressGuard
+            </a>
+          </div>
+        </div>
       </div>
     </main>
   );
