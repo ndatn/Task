@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <div className={styles.main}>
       <div className={styles.container}>
         <div className={styles.imageContainer}>
           <Image
@@ -32,20 +32,19 @@ export default function Home() {
             <span className={styles.checkboxText}>Remember Me</span>
             <button className={styles.button}>Login</button>
           </label>
-
-          <div className={styles.links}>
-            <a href="#" className={styles.link}>
-              Lost your Password?
-            </a>
-            <a href="#" className={styles.link}>
-              Go to Security Guard Company
-            </a>
-            <a href="#" className={styles.link}>
-              XPressGuard
-            </a>
-          </div>
         </div>
       </div>
-    </main>
+      <div className={styles.links}>
+        <a href="#" className={styles.link}>
+          Lost your Password?
+        </a>{' '}
+        <a href="#" className={styles.link}>
+          Go to Security Guard Company
+        </a>
+        <a href="#" className={styles.link}>
+          XPressGuard
+        </a>
+      </div>
+    </div>
   );
 }
