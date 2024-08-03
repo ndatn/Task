@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="testPage.css">
+</head>
+
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick="hideSidebar()"><a href="">x</a></li>
+      <li><a href="">1</a></li>
+      <li><a href="">1</a></li>
+      <li><a href="">1</a></li>
+      <li><a href="">1</a></li>
+      <li><a href="">1</a></li>
+    </ul>
+    <ul>
+      <li><a href="">Coding</a></li>
+      <li class="hideOnMobile"><a href="">2</a></li>
+      <li class="hideOnMobile"><a href="">2</a></li>
+      <li class="hideOnMobile"><a href="">2</a></li>
+      <li class="hideOnMobile"><a href="">2</a></li>
+      <li class="hideOnMobile"><a href="">2</a></li>
+      <li class="menu-button" onclick="showSidebar()"><a href="">-</a></li>
+    </ul>
+  </nav>
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+      localStorage.setItem('sidebarStatus', 'visible')
+    }
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+      localStorage.setItem('sidebarStatus', 'hidden')
+    }
+    // Load the sidebar's status from local storage
+    const sidebarStatus = localStorage.getItem('sidebarStatus')
+    if (sidebarStatus === 'visible') {
+      showSidebar()
+    } else {
+      hideSidebar()
+    }
+  </script>
+</body>
+
+</html>
